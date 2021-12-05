@@ -39,3 +39,13 @@ def guess():
 
         guess = int(input("\033[3;31;40m\nTry again \033[0m"))
 
+    if count < 3:
+        print("\n\033[1;32;40mYou're quite good at this! You guessed the number in ", count, " tries!\033[0m🥳\n")
+    elif count < 5:
+        print("\n\033[1;32;40mGood job! You guessed the number in ", count, " tries!\033[0m🥳\n")
+    elif count > 5:
+        print("\n\033[1;33;40mIt took you ", count, " tries to get it right, but it was a nice try\033[0m🥳\n")
+        return
+
+guess()
+
