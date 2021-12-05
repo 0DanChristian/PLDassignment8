@@ -12,3 +12,7 @@ user = input("\nPlease enter your \033[1mname\033[0m: ")
 # welcome
 print(f"\n\033[7;34;40mWelcome {user}!, this program is a guess game!\033[0m \n")
 
+# import
+import random
+import sys
+
