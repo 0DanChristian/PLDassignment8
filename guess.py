@@ -16,3 +16,9 @@ print(f"\n\033[7;34;40mWelcome {user}!, this program is a guess game!\033[0m \n"
 import random
 import sys
 
+# define var
+def guess():
+    number = random.randint(1,100)
+    count  = 1
+    guess  = int(input("Enter your guess between 1 and 100: "))
+
