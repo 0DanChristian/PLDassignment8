@@ -106,3 +106,22 @@ def main():
         # if the user input is invalid, such as: integers, this input accepts only y/n
         print("\nInvalid input\n")
 
+    while True:
+        print("That was nice!")
+        # play again?
+        pl_again = input("\n\033[2;33;46mPlay again?\033[0m😃 ").lower()
+        
+        # if yes, the program will start all over again
+        if pl_again.replace(",","",10).title() == "Yes":
+
+            main()
+            break
+        
+        # if no, the program will exit
+        elif pl_again.replace(",","",10).title() == "No":
+            print("Thank you, come again")
+            break
+        
+# call
+if __name__ == '__main__':
+    main()
