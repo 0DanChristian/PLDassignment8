@@ -78,3 +78,31 @@ def pick():
     numWin = winningNo()
     lottery(userInput, numWin)
 
+# call the rest of the function
+def main():
+    play()
+    while True:
+
+        # ask the user to play
+        choice = input("\nDo you want to play? \033[3;37;40m(yes or no)\033[0m: ")
+        if choice.replace(",","",10).title() == "Yes":
+
+            # if yes, then the user will need to type 3 numbers
+            string =  "\n               \033[2;33;46mPlease type your {}".format(num_Entry) + " lucky numbers!\033[0m"
+            design = '\n'+ len(string) * "-"
+
+            # display in this format
+            print(design,
+                    string,
+                    design)
+
+            pick()
+            break
+        # if the user doesnt want to play, then the program will exit
+        elif choice.replace(",","",10).title() == "No":
+            print("Thank you!\n")
+            break
+        
+        # if the user input is invalid, such as: integers, this input accepts only y/n
+        print("\nInvalid input\n")
+
