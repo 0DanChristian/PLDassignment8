@@ -20,5 +20,22 @@ import sys
 def guess():
     number = random.randint(1,100)
     count  = 1
-    guess  = int(input("Enter your guess between 1 and 100: "))
+    guess  = int(input("Enter your guess between \033[4;37;40m1 and 100\033[0m: "))
+
+    while guess != number:
+        count   += 1
+        if guess > (number + 10):
+            print("\nIt's quite high!")
+        elif guess < (number - 10):
+            print("\nThat is quite too low!")
+        elif guess > (number + 5):
+            print("\nYou're close, lower it a little bit")
+        elif guess < (number -5):
+            print("\nYou're close, push it up a little bit")
+        elif guess > number:
+            print("\nA little bit high, but you're almost there!")
+        elif guess < number:
+            print("\nA little bit low, you're almost there!")
+
+        guess = int(input("\033[3;31;40m\nTry again \033[0m"))
 
