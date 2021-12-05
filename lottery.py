@@ -61,3 +61,8 @@ def userNum():
     
     # the program will naturally sort the numbers
     return sorted(userInput)
+
+# list of winning random nos ranging from 0-9 with a range of 3 values
+def winningNo():
+    return sorted(random.sample(range(min_no, max_no),num_Entry))
+
