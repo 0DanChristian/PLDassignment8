@@ -66,3 +66,9 @@ def userNum():
 def winningNo():
     return sorted(random.sample(range(min_no, max_no),num_Entry))
 
+# play or exit
+def play():
+    lott = ' '*int(OFFSETT/2) + "             \033[2;33;46m🎉 Lottery 🎉\033[0m"
+    design = (OFFSETT+len(lott))*'-'
+    print ('{} \n{} \n{}'.format(design, lott, design))
+
