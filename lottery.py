@@ -72,3 +72,9 @@ def play():
     design = (OFFSETT+len(lott))*'-'
     print ('{} \n{} \n{}'.format(design, lott, design))
 
+# pick number
+def pick():
+    userInput = userNum()
+    numWin = winningNo()
+    lottery(userInput, numWin)
+
